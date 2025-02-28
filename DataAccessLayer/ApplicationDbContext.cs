@@ -29,7 +29,7 @@ namespace DataAccessLayer
                 .HasOne(x => x.CreatorUser)
                 .WithMany(x => x.Ideas)
                 .HasForeignKey(x => x.CreatorId);
-            
+
             builder.Entity<Comment>()
                 .HasOne(x => x.CreatorUser)
                 .WithMany(x => x.Comments)
@@ -69,7 +69,7 @@ namespace DataAccessLayer
                 .HasOne(x => x.Idea)
                 .WithMany(x => x.Tags)
                 .HasForeignKey(x => x.IdeaId);
-            
+
             builder.Entity<relIdeaLike>()
                 .HasOne(x => x.CreatorUser)
                 .WithMany(x => x.relIdeaLikes)
